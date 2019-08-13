@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nodejs
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: nodejs-container
+          image: "developerrohitkhatri/sample-nodejs-api"
+          env:
+          - name: URI
+            valueFrom:
+              configMapKeyRef:
+                name: nodejs-configmaps
+                key: URI
