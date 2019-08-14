@@ -18,3 +18,33 @@ spec:
               configMapKeyRef:
                 name: nodejs-configmaps
                 key: URI
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: nodejs-configmaps
+                key: DB_HOST
+          - name: DB_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: nodejs-configmaps
+                key: DB_PORT
+
+          - name: DB_DATABASE
+            valueFrom:
+              configMapKeyRef:
+                name: nodejs-configmaps
+                key: DB_DATABASE
+
+          - name: DB_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: nodejs-configmaps
+                key: DB_USERNAME
+
+          - name: DB_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: nodejs-configmaps
+                key: DB_PASSWORD
+          ports:
+            - containerPort: 3000

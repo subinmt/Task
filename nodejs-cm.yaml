@@ -3,8 +3,8 @@ kind: ConfigMap
 metadata:
   name: nodejs-configmaps
 data:
-  URI: "mongodb://mongodb-svc:27017"
-  DB_HOST: localhost
+  URI: mongodb://mongodb-svc:27017
+  DB_HOST: "mongodb-svc"
   DB_PORT: "27017"
   DB_DATABASE: "sample"
   DB_USERNAME: "sample"
